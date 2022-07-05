@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&family=Montserrat:wght@200&family=Ubuntu:wght@500&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    font-family: Ubuntu;
+    background: #03558b;
+    height: 4rem;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+label.logo{
+    margin-left: 2rem;
+    color: white;
+    font-size: 35px;
+}
+ul{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    color: white;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-right: 4rem;
+}
+.anc{
+    text-decoration: none;
+    color: white;
+}
+.anc:hover{
+    background-color: white;
+    color: #192e3f;
+}
+.burger{
+height: 2rem;
+width: 2rem;
+display:none;
+cursor: pointer;
+margin-right: 3rem;
+}
+.line1{
+    margin: 3px;
+    height: 0.27rem;
+    width: 1.5rem;
+    background-color: white;
+}
+.line2{
+    margin: 3px;
+    height: 0.3rem;
+    width: 1.5rem;
+    background-color: white;
+}
+.line3{
+    margin: 3px;
+    height: 0.3rem;
+    width: 1.5rem;
+    background-color: white;
+}
+.move{
+    z-index: 2;
+    transform: translateY(-1.65%);
+}
+input[type=text] {
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid grey;
+    float: left;
+    width: 100%;
+    border-radius: 8px;
+    background: #f1f1f1;
+  }
+  input[type=text]:focus{
+    outline: none;
+  }
+.nav-btn{
+    font-size: 2rem;
+    padding: 0.03rem 0.2rem;
+    background-color: #192e3f;
+    color: white;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin-left: -4.2rem;
+ outline: none;
+ cursor: pointer;
+}
+@media screen and (max-width: 850px) {
+    .burger{
+        display: block;
+        position: absolute;
+        top:25px;
+        right: 35px;
+        z-index: 1;
+    }
+    .ul{
+        z-index: 2;
+        transition: all 0.5s ease-in-out;
+        margin-top: 34rem;
+        flex-direction: column;
+        background-color:  #03558b;
+        width: 50%;
+        margin-right: 0rem;
+        height: 30rem;
+        transform: translateY(-115%);
+        padding: 0.1rem;
+    }
+    .ul li:first-child{
+        margin-top: 5rem;
+    }
+    label.logo{
+        font-size: 25px;
+    }
+    .nav-btn{
+        margin-left: 2.4rem;
+    position: absolute;
+    bottom: 7.965rem;
+    }
+
+  }
