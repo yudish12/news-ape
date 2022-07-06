@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 import News from "./News";
 // import Spinner from 'react-bootstrap/Spinner';
 import Pagination from "./pagination";
@@ -11,8 +10,11 @@ function NewsData(props){
     const url = "https://newsapi.org/v2/everything?q=bitcoin&apiKey=b1eb4c4a15934003a65165ade75465c7"
     let [chunk,setChunk] = React.useState(null);
     React.useEffect(()=>{
-    axios.get(url).then((res)=>{
-        setChunk(res.data.articles);
+    fetch(url).then((Data)=>{
+        Data.json().then(res=>{
+            console.log(res);
+            setChunk(res.articles);
+        })
     }).catch((err)=>{
         console.log(err);
     })
